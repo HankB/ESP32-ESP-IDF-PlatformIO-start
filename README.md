@@ -2,6 +2,10 @@
 
 Starting point for ESP32 projects based on ESP-IDF (FreeRTOS), WiFi, NTP and MQTT.
 
+## Rename
+
+I've added `PlatformIO` to the project name to clarifyu that part of the tool chain. I found it does make a difference. (<https://github.com/HankB/Fun_with_ESP32/tree/main/ESP-IDF-PIO-VS_code> gave me fits adding support for the DS18B20 temperature sensor and I did so with ease using "bare" ESP-IDF tools as described by Espressif. I intend to duplicate this effort using that and will link to that when working.)
+
 ## Motivation
 
 Provide a foundation for future projects that run on an ESP32 using the ESP-IDF platform (which includes Espressif's version of FreeRTOS), WiFi access, NTP time keeping and an MQTT client. Many of my projects start with this combination. 
