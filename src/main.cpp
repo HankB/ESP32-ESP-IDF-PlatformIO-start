@@ -27,6 +27,37 @@ extern "C"
 
 static const bool chatty = false;
 
+// Timer class/object, encapsulates an action and the information
+// required to schedule execution. Timer:next is either the value
+// returned by time(0) in seconds or some arbitrary timing mark 
+// maintained by the program.
+
+class Timer {
+    protected:
+        time_t  next;       // next time(0) the action should be executed
+        time_t  interval;   // periodic interval to fire the action
+        Timer() {};         // no public default ctor
+    public:
+        time_t get_next(void) { return next; }
+        virtual bool do_action(void);  // return true to reschedule
+        Timer(bool (*ptr)(void)):next(0), interval(0) {};
+};
+
+
+class PublishState:Timer {
+    public:
+        bool do_action(void);
+};
+
+bool PublishState::do_action(void) {
+    return true;
+}
+
+PublishState pubState();
+
+static Timer actions[1] = {pubState}; // actions to publish state and 'data' content
+
+
 // LED ========================================
 
 static const gpio_num_t blink_led = GPIO_NUM_2;

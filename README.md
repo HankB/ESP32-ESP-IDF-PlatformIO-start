@@ -34,6 +34,10 @@ Just creted a C++ branch with the intent to migrate this code to C++. Decision h
     * ~MQTT broker restart~
     * Test SNTP through ntp server restart. Will test next time edge router (NTP server) is restarted.
 
+## Branch notes
+
+`C++-Timer` is a feature branch to produce a class to assist with executing actions at timed intervals.
+
 ## Testing
 
 The following functional tests have been performed.
