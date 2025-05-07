@@ -4,7 +4,7 @@ Starting point for ESP32 projects based on ESP-IDF (FreeRTOS), WiFi, NTP and MQT
 
 ## Rename
 
-I've added `PlatformIO` to the project name to clarifyu that part of the tool chain. I found it does make a difference. (<https://github.com/HankB/Fun_with_ESP32/tree/main/ESP-IDF-PIO-VS_code> gave me fits adding support for the DS18B20 temperature sensor and I did so with ease using "bare" ESP-IDF tools as described by Espressif. I intend to duplicate this effort using that and will link to that when working.)
+I've added `PlatformIO` to the project name to clarify that part of the tool chain. I found it does make a difference. (<https://github.com/HankB/Fun_with_ESP32/tree/main/ESP-IDF-PIO-VS_code> gave me fits adding support for the DS18B20 temperature sensor and I did so with ease using "bare" ESP-IDF tools as described by Espressif. I intend to duplicate this effort using that and the result of that effort are at <https://github.com/HankB/ESP32-ESP-IDF-CLI-start/tree/main>
 
 ## Motivation
 
@@ -23,11 +23,11 @@ Everything desired for this project is complete, working and tested.
 
 ### TODO
 
-* ~Rework the example code for MQTT to do something more useful (than just subscribe and publish to itself.)~
-* ~Determine how to publish from other threads and provide an internal API for that.~
+* ~~Rework the example code for MQTT to do something more useful (than just subscribe and publish to itself.)~~
+* ~~Determine how to publish from other threads and provide an internal API for that.~~
 * Test the WiFi and MQTT code to provide error recovery on disconnect.
-    * ~AP restart~
-    * ~MQTT broker restart~
+    * ~~AP restart~~
+    * ~~MQTT broker restart~~
     * Test SNTP through ntp server restart. Will test next time edge router (NTP server) is restarted.
 
 ## Testing
